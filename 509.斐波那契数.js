@@ -12,6 +12,8 @@ function createFib() {
   }
 }
 
+const fib = createFib();
+
 /*
  * @lc app=leetcode.cn id=509 lang=javascript
  *
@@ -21,5 +23,14 @@ function createFib() {
  * @param {number} N
  * @return {number}
  */
-var fib = createFib();
+// function fib(n, prev = 0, next = 1) {
+//   if (n === 0) {
+//     return prev;
+//   }
 
+//   if (n === 1) {
+//     return next;
+//   }
+
+//   return fib(n - 1, next, prev + next);
+// }
