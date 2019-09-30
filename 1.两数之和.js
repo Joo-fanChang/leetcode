@@ -29,17 +29,29 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
+// var twoSum = function(nums, target) {
+//   for(let i = 0; i < nums.length; i++) {
+//     let num = nums[i];
 
+//     let delta = target - num;
+//     let deltaNumIdx = nums.indexOf(delta);
+
+//     if (deltaNumIdx !== i && deltaNumIdx > -1) {
+//       return [i, deltaNumIdx];
+//     }
+//   }
+// };
+
+var twoSum = function(nums, target) {
+  const map = {};
   for(let i = 0; i < nums.length; i++) {
     let num = nums[i];
-
-    let delta = target - num;
-    let deltaNumIdx = nums.indexOf(delta);
-
-    if (deltaNumIdx !== i && deltaNumIdx > -1) {
-      return [i, deltaNumIdx];
+    if (map[target - num] !== undefined) {
+      return [ map[target - num], i ];
+    } else {
+      map[num] = i;
     }
   }
+  return [];
 };
 
