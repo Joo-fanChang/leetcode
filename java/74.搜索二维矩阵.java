@@ -1,3 +1,5 @@
+package java;
+
 /*
  * @lc app=leetcode.cn id=74 lang=java
  *
