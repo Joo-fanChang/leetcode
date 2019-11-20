@@ -1,5 +1,5 @@
 /*
- * @lc app=leetcode.cn id=9 lang=javascript
+ * @lc app=leetcode.cn id=9 lang=java
  *
  * [9] 回文数
  *
@@ -42,20 +42,19 @@
  */
 
 // @lc code=start
-/**
- * @param {number} x
- * @return {boolean}
- */
-var isPalindrome = function(x) {
-  if (x < 0) {
-    return false;
-  }
-  let s = x + '';
-  for(let left = 0, right = s.length - 1; left < right; left++, right--) {
-    if (s[left] !== s[right]) {
-      return false;
+class Solution {
+    public boolean isPalindrome(int x) {
+      if (x < 0) {
+        return false;
+      }
+      String s = x + "";
+      for(int left = 0, right = s.length() - 1; left <= right; left++, right--) {
+        if (s.charAt(left) != s.charAt(right)) {
+          return false;
+        }
+      }
+      return true;
     }
-  }
-  return true;
-};
+}
 // @lc code=end
+
