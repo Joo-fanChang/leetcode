@@ -1,5 +1,3 @@
-package java;
-
 import java.util.HashMap;
 import java.util.Stack;
 
